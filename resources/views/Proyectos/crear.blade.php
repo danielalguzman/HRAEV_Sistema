@@ -15,52 +15,8 @@
 </div>
 <!-- FIN CABECERA -->
 
-<div class="row">
-	<div class="col-xl-12 col-md-12 col-lg-12">
-		<div class="card">
-			<div class="card-body">
-			<div class="form-group" style="width=30%;">
-					<h4><label for="status_id"><b>Establecimiento de Objetivos</b></label><br></h4>
-					<div class="row">
-						<div class="table-responsive">
-							<table class="table  text-wrap border-bottom table-borderless" id="mytable">
-								<tbody>
-									<tr>
-										<td>
-											<!-- INICIO DE LA TARJETA -->
-											<div class="form-group">
-											<br><label class="form-label">Adjunta la Política de Seguridad.</label>
-												<div class="input-group file-browser">
-													<input type="text" class="form-control border-right-0 browse-file" placeholder="Formato PDF" readonly value="@isset($profile->url_image){{substr(explode('/', $profile->url_image)[1],10)}}@endisset">
-													<label class="input-group-append mb-0">
-														<span class="btn ripple btn-primary"> Examinar <input type="file" class="file-browserinput" 
-															style="display: none;" accept="image/*" name="url_image" 
-															id="url_image" onchange="previewImage(event)">
-														</span>
-													</label>
-												</div>
-											</div>
-										</td>
-									</tr>
-								</tbody>
-							</table>
 
-							<!-- INSERTA LA LECTURA DE QUE SE CARGÓ CON EXITO -->
-							<div class="text-right">
-								<button type="text" class="btn" id="enviar">
-								<input type="text" class="form-control" placeholder="          ... Cargando" readonly>
-								</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
-<!-- CONTENIDO -->
+<!-- CONTENIDO
 <div class="row">
 	<div class="col-xl-12 col-md-12 col-lg-12">
 		<div class="card">
@@ -74,29 +30,6 @@
 					<input type="checkbox" id="cbox5" value="cinco_checkbox">  05. Establecer mecanismos para la respuesta inmediata a incidentes a la seguridad de la información.</label><br><br>
 					<input type="checkbox" id="cbox6" value="seis_checkbox">   06. Vigilar los mecanismos establecidos y el desempeño del SGSI, a fin de prever desviaciones y mantener una mejora continua.</label><br><br>
 					<input type="checkbox" id="cbox7" value="siete_checkbox">  07. Fomentar una cultura de seguridad de la información en la Institución.</label><br>
-
-					<!--<select style="width=20%;" class="form-control custom-select status @error('status_id') is-invalid @enderror" name="status_id" id="status_id">
-						<option value="0"> Selecciona...</option>
-						<option value="0"> 01. Establecer, operar y mantener un modelo de gobierno de seguridad de la información.</option>
-						<option value="1"> 02. Efectuar la identificación de Infraestructuras de información esenciales y, en su caso, críticas, así como de activos clave de la Institución, y elaborar el catálogo respectivo.</option>
-						<option value="2"> 03. Establecer los mecanismos de administración de riesgos que permitan identificar, analizar, evaluar, atender y monitorear los riesgos.</option>
-						<option value="3"> 04. Establecer un SGSI que proteja los activos de información de la Institución, con la finalidad de preservar su confidencialidad, integridad y disponibilidad.</option>
-						<option value="4"> 05. Establecer mecanismos para la respuesta inmediata a incidentes a la seguridad de la información.</option>
-						<option value="5"> 06. Vigilar los mecanismos establecidos y el desempeño del SGSI, a fin de prever desviaciones y mantener una mejora continua.</option>
-						<option value="6"> 07. Fomentar una cultura de seguridad de la información en la Institución.</option>
-					</select> -->
-
-					<!--<select class="form-control custom-select status @error('status_id') is-invalid @enderror"
-							name="status_id" id="status_id">
-						@isset($statuses)
-							<option>  </option>
-							@foreach($statuses as $status)
-								<option value="{{$status->id}}">
-									{{ $status->name }}
-								</option>
-							@endforeach
-						@endisset
-					</select> -->
 
 					@error('status_id')
 						<span class="invalid-feedback" role="alert">
@@ -117,7 +50,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div> -->
 
 
 
@@ -385,15 +318,16 @@
 							</table>
 							<!-- FIN DE LA TABLA -->
 
-							<table class="table text-nowrap" id="hr-table">
+							<table class=" text-nowrap" id="hr-table">
 								<tbody>
 									<tr class="border-bottom">
 										<td></td>
-										<div class="text-right">
+										<div class="text-right" Style="margin-top: 5%;">
 											<a role="button" class="btn btn-outline-dark" href="{{ url()->previous() }}">
 												<i class="feather feather-corner-down-left sidemenu_icon"></i>
 												Regresar
 											</a>
+
 											<button type="submit" class="btn btn-primary" id="enviar">
 												<i class="feather feather-save sidemenu_icon"></i>
 												Guardar

@@ -12,7 +12,7 @@
 			<li class="slide">
 				<a class="side-menu__item {{ Request::is('/') ? 'active' : '' }}" data-toggle="slide" href="{{route('home')}}" id="/">
 					<i class="fa-solid fa-gauge mr-2"></i>
-					<span class="side-menu__label">Filtros</span>
+					<span class="side-menu__label">Inicio</span>
 				</a>
 			</li>
 
@@ -26,7 +26,7 @@
 			<li class="slide">
 				<a class="side-menu__item {{ Request::is('departamentos') ? 'active' : '' }}" data-toggle="slide" href="{{route('departamentos.index')}}" id="departamentos">
 					<i class="fa-solid fa-address-card mr-2"></i>
-					<span class="side-menu__label">Rubros  ->  Táctico</span>
+					<span class="side-menu__label">Nivel Táctico</span>
 				</a>
 			</li>
 
